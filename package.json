@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"require-all",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "require-all",
+    "description": "api documentation for [require-all (v2.2.0)](https://github.com/felixge/node-require-all#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-require-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-require-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-require-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-require-all)",
     "devDependencies": {
-        "require-all": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "require-all": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-require-all",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-require-all",
+    "keywords": [
+        "documentation",
+        "require-all"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_require_all.js",
+    "name": "npmdoc-require-all",
+    "nameAlias": "npmdoc_require_all",
+    "nameOriginal": "npmdoc-require-all",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-require-all"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
