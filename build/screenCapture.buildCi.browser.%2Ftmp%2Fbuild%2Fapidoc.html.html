@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/felixge/node-require-all#readme"
-
-    >require-all (v2.2.0)</a>
+    <a href="https://github.com/felixge/node-require-all#readme">require-all (v2.2.0)</a>
 </h1>
 <h4>An easy way to require all files within a directory.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.require-all">module require-all</a><ol>
 
@@ -86,7 +79,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function requireAll(options) {
-  var dirname = typeof options === &#x27;string&#x27; ? options : options.dirname;
+  var dirname = typeof options === 'string' ? options : options.dirname;
   var excludeDirs = options.excludeDirs === undefined ? DEFAULT_EXCLUDE_DIR : options.excludeDirs;
   var filter = options.filter === undefined ? DEFAULT_FILTER : options.filter;
   var modules = {};
@@ -96,11 +89,11 @@
 
   function excludeDirectory(dirname) {
     return !recursive ||
-      (excludeDirs &#x26;&#x26; dirname.match(excludeDirs));
+      (excludeDirs &amp;&amp; dirname.match(excludeDirs));
   }
 
   function filterFile(filename) {
-    if (typeof filter === &#x27;function&#x27;) {
+    if (typeof filter === 'function') {
       return filter(filename);
     }
 
@@ -113,7 +106,7 @@
   var files = fs.readdirSync(dirname);
 
   files.forEach(function (file) {
-    var filepath = dirname + &#x27;/&#x27; + file;
+    var filepath = dirname + '/' + file;
     if (fs.statSync(filepath).isDirectory()) {
 
       if (excludeDirectory(file)) return;
@@ -148,3 +141,4 @@
     ]
 </div>
 </div>
+</body></html>

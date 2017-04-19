@@ -61,12 +61,84 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.require-all">module require-all</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.require-all.require-all">
+            function <span class="apidocSignatureSpan"></span>require-all
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.require-all" id="apidoc.module.require-all">module require-all</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.require-all.require-all" id="apidoc.element.require-all.require-all">
+        function <span class="apidocSignatureSpan"></span>require-all
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requireAll(options) {
+  var dirname = typeof options === &#x27;string&#x27; ? options : options.dirname;
+  var excludeDirs = options.excludeDirs === undefined ? DEFAULT_EXCLUDE_DIR : options.excludeDirs;
+  var filter = options.filter === undefined ? DEFAULT_FILTER : options.filter;
+  var modules = {};
+  var recursive = options.recursive === undefined ? DEFAULT_RECURSIVE : options.recursive;
+  var resolve = options.resolve || identity;
+  var map = options.map || identity;
+
+  function excludeDirectory(dirname) {
+    return !recursive ||
+      (excludeDirs &#x26;&#x26; dirname.match(excludeDirs));
+  }
+
+  function filterFile(filename) {
+    if (typeof filter === &#x27;function&#x27;) {
+      return filter(filename);
+    }
+
+    var match = filename.match(filter);
+    if (!match) return;
+
+    return match[1] || match[0];
+  }
+
+  var files = fs.readdirSync(dirname);
+
+  files.forEach(function (file) {
+    var filepath = dirname + &#x27;/&#x27; + file;
+    if (fs.statSync(filepath).isDirectory()) {
+
+      if (excludeDirectory(file)) return;
+
+      modules[map(file, filepath)] = requireAll({
+        dirname: filepath,
+        filter: filter,
+        excludeDirs: excludeDirs,
+        map: map,
+        resolve: resolve
+      });
+
+    } else {
+      var name = filterFile(file);
+      if (!name) return;
+
+      modules[map(name, filepath)] = resolve(require(filepath));
+    }
+  });
+
+  return modules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
