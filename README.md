@@ -1,9 +1,14 @@
-# api documentation for  [require-all (v2.2.0)](https://github.com/felixge/node-require-all#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-require-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-require-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-require-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-require-all)
+# npmdoc-require-all
+
+#### api documentation for  [require-all (v2.2.0)](https://github.com/felixge/node-require-all#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-require-all.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-require-all) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-require-all.svg)](https://travis-ci.org/npmdoc/node-npmdoc-require-all)
+
 #### An easy way to require all files within a directory.
 
-[![NPM](https://nodei.co/npm/require-all.png?downloads=true)](https://www.npmjs.com/package/require-all)
+[![NPM](https://nodei.co/npm/require-all.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/require-all)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-require-all/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-require-all_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-require-all/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-require-all/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-require-all/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-require-all/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-require-all/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-require-all/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Felix Geisendörfer",
-        "email": "felix@debuggable.com",
         "url": "http://debuggable.com/"
     },
     "bugs": {
@@ -26,16 +30,13 @@
     },
     "contributors": [
         {
-            "name": "Douglas Christopher Wilson",
-            "email": "doug@somethingdoug.com"
+            "name": "Douglas Christopher Wilson"
         },
         {
-            "name": "Prince Obiechine Onyenike",
-            "email": "leewaygroups@gmail.com"
+            "name": "Prince Obiechine Onyenike"
         },
         {
             "name": "Nuno Job",
-            "email": "nunojobpinto@gmail.com",
             "url": "http://nunojob.com"
         }
     ],
@@ -63,25 +64,20 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "dougwilson",
-            "email": "doug@somethingdoug.com"
+            "name": "dougwilson"
         },
         {
-            "name": "dscape",
-            "email": "nunojobpinto@gmail.com"
+            "name": "dscape"
         },
         {
-            "name": "felixge",
-            "email": "felix@debuggable.com"
+            "name": "felixge"
         },
         {
-            "name": "thlorenz",
-            "email": "thlorenz@gmx.de"
+            "name": "thlorenz"
         }
     ],
     "name": "require-all",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/felixge/node-require-all.git"
@@ -92,16 +88,6 @@
     "version": "2.2.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module require-all](#apidoc.module.require-all)
-
-
-
-# <a name="apidoc.module.require-all"></a>[module require-all](#apidoc.module.require-all)
 
 
 
